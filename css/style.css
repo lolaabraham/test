@@ -40,10 +40,9 @@
       background-color: #ffffff;   /* optional to see content area */
       overflow-y: auto;            /* enable scrolling */
 
-      font-family: 'EB Garamond', serif;
       font-size: 10pt;
-      color: #333333;
       text-align: justify;
+      color: #333333;
 
       background-color: #f0f0f0;
     }
