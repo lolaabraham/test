@@ -57,13 +57,12 @@ body {
 .submenu-collapsible {
   max-height: 0;               /* start collapsed */
   overflow: hidden;            /* hide overflowing content */
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding-left: 0;             /* initial padding removed for animation */
+  transition: max-height 0.3s ease;  /* smooth slide */
 }
 
+/* Open state */
 .submenu-collapsible.show {
-  max-height: 500px;           /* enough for content */
-  padding-left: inherit;       /* restore indentation when open */
+  max-height: 1000px;          /* big enough for nested content */
 }
 
 /* Level-specific indentation */
