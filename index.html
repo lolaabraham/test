@@ -70,10 +70,10 @@ collapsibles.forEach(item => {
       // Toggle submenu visibility
       submenu.classList.toggle('show');
 
-      // Toggle + / - for this item
-      if (item.textContent.startsWith('+')) {
+      // Set symbol correctly based on whether submenu is open
+      if (submenu.classList.contains('show')) {
         item.textContent = item.textContent.replace('+', '-');
-      } else if (item.textContent.startsWith('-')) {
+      } else {
         item.textContent = item.textContent.replace('-', '+');
       }
     }
