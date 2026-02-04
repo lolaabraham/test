@@ -24,7 +24,7 @@
     <span class="collapsible">+ Cobalt, ON | 47.3953° N, 79.6861° W</span>
     <div class="submenu-collapsible level1">
       - Past<br>
-      <span class="collapsible">- Present</span>
+      <span class="collapsible">+ - Present</span>
       <div class="submenu-collapsible level2">
         - Property<br>
         - Extraction<br>
@@ -47,17 +47,24 @@
         if (submenu && submenu.classList.contains('submenu-collapsible')) {
           submenu.classList.toggle('show');
 
-          // Close all nested open submenus when parent closes
-          if (!submenu.classList.contains('show')) {
-            const nestedSubmenus = submenu.querySelectorAll('.submenu-collapsible.show');
-            nestedSubmenus.forEach(nested => nested.classList.remove('show'));
-          }
-
-          // Update the plus/minus indicator
+          // Toggle + / −
           if (item.textContent.startsWith('+')) {
             item.textContent = item.textContent.replace('+', '−');
           } else if (item.textContent.startsWith('−')) {
             item.textContent = item.textContent.replace('−', '+');
+          }
+
+          // Close all nested open submenus when parent closes
+          if (!submenu.classList.contains('show')) {
+            const nestedSubmenus = submenu.querySelectorAll('.submenu-collapsible.show');
+            nestedSubmenus.forEach(nested => nested.classList.remove('show'));
+
+            const nestedCollapsibles = submenu.querySelectorAll('.collapsible');
+            nestedCollapsibles.forEach(nestedItem => {
+              if (nestedItem.textContent.startsWith('−')) {
+                nestedItem.textContent = nestedItem.textContent.replace('−', '+');
+              }
+            });
           }
         }
       });
