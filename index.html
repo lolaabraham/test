@@ -21,8 +21,8 @@
 
   <!-- Right Column / Menu -->
   <div class="right">
-    + Cobalt, ON | 47.3953° N, 79.6861° W
-  <div class="submenu">
+  <span class="collapsible">+ Cobalt, ON | 47.3953° N, 79.6861° W</span>
+  <div class="submenu-collapsible">
     - Past<br>
     <span class="collapsible">- Present</span>
     <div class="submenu-collapsible">
@@ -42,10 +42,8 @@
   collapsibles.forEach(item => {
     item.addEventListener('click', () => {
       const submenu = item.nextElementSibling;
-      if (submenu.style.display === 'block') {
-        submenu.style.display = 'none';
-      } else {
-        submenu.style.display = 'block';
+      if (submenu && submenu.classList.contains('submenu-collapsible')) {
+        submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
       }
     });
   });
