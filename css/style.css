@@ -6,16 +6,16 @@ body {
   font-family: 'EB Garamond', serif;
 }
 
-/* Left Column */
+/* ===== LEFT COLUMN ===== */
 .left {
   position: fixed;
   top: 144px;
-  bottom: 24px;
-  left: 24px;
+  bottom: 48px;        /* updated bottom margin */
+  left: 48px;          /* updated page margin */
   width: 192px;
 
   font-size: 18pt;
-  text-align: right;
+  text-align: right;   /* keeps logo right-aligned */
   color: #333333;
 
   background-color: #ffffff;
@@ -24,19 +24,19 @@ body {
 /* Logo in left column */
 .left .logo {
   display: block;
-  width: 120px;      /* native size */
-  height: 120px;     /* native size */
-  margin: 0;        /* no extra spacing */
-  float: right;     /* right-align within the column */
+  width: 120px;        /* native size */
+  height: 120px;       /* native size */
+  margin: 0;           /* no extra spacing */
+  float: right;        /* right-align within the column */
 }
 
-/* Center Column */
+/* ===== CENTER COLUMN ===== */
 .center {
   position: absolute;
   top: 144px;
-  bottom: 24px;
-  left: calc(24px + 192px + 48px);
-  right: calc(264px + 72px + 24px);
+  bottom: 48px;        /* updated bottom margin */
+  left: calc(48px + 192px + 48px);   /* left column + gap, page margin updated */
+  right: calc(264px + 72px + 48px);  /* right column + gap, page margin updated */
   
   overflow-y: auto;
 
@@ -47,12 +47,12 @@ body {
   background-color: #ffffff;
 }
 
-/* Right Column */
+/* ===== RIGHT COLUMN ===== */
 .right {
   position: fixed;
   top: 144px;
-  bottom: 24px;
-  right: 24px;
+  bottom: 48px;        /* updated bottom margin */
+  right: 48px;         /* updated page margin */
   width: 264px;
 
   font-size: 10pt;
@@ -62,7 +62,7 @@ body {
   background-color: #ffffff;
 }
 
-/* Collapsible submenu styling with smooth animation */
+/* ===== COLLAPSIBLES ===== */
 .submenu-collapsible {
   max-height: 0;               /* start collapsed */
   overflow: hidden;            /* hide overflowing content */
@@ -90,17 +90,17 @@ body {
   user-select: none;
 }
 
-/* Bio / contact blurb at bottom-left of right column */
+/* ===== BIO / CONTACT ===== */
 .bio-contact {
   position: absolute;
   bottom: 0;
   left: 0;
 
   font-size: 10pt;
-  font-style: italic;       /* make text italic */
-  color: #898989;           /* correct gray color */
-  text-align: left;         /* left-aligned text */
+  font-style: italic;       /* italic text */
+  color: #898989;           /* gray */
+  text-align: left;         /* left-aligned */
 
   line-height: 1.3;
-  max-width: 100%;          /* prevent overflow */
+  max-width: 100%;           /* prevent overflow */
 }
