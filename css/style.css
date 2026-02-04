@@ -10,8 +10,8 @@ body {
 .left {
   position: fixed;
   top: 144px;
-  bottom: 48px;        /* updated baseline */
-  left: 48px;           /* updated margin */
+  bottom: 48px;
+  left: 48px;
   width: 192px;
 
   font-size: 18pt;
@@ -35,8 +35,8 @@ body {
   position: absolute;
   top: 144px;
   bottom: 48px;
-  left: calc(48px + 192px + 48px);   /* left page margin + left column + spacing */
-  right: calc(264px + 48px + 48px);  /* right column + spacing + page margin */
+  left: calc(48px + 192px + 48px);
+  right: calc(264px + 48px + 48px);
   
   overflow-y: auto;
 
@@ -60,49 +60,35 @@ body {
   color: #333333;
 
   background-color: #ffffff;
-  font-style: italic;   /* menu default italic */
+  font-style: italic;   /* menu italic */
 }
 
-/* Collapsible submenu styling with smooth animation */
+/* Collapsible submenu styling */
 .submenu-collapsible {
-  max-height: 0;              
-  overflow: hidden;            
-  transition: max-height 0.3s ease;  
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 /* Open state */
 .submenu-collapsible.show {
-  max-height: 1000px;          
+  max-height: 1000px;
 }
 
 /* Level-specific indentation */
 .submenu-collapsible.level1 {
-  margin-left: 12px;   
+  margin-left: 12px;
 }
 
 .submenu-collapsible.level2 {
-  margin-left: 24px;   
+  margin-left: 24px;
 }
 
-/* Menu links (override default link styles) */
-.right a.collapsible {
-  color: #333333;
-  text-decoration: none;
+/* Make collapsible items clickable */
+.collapsible {
   display: block;
-  font-style: italic;
   cursor: pointer;
   user-select: none;
-}
-
-/* Active menu item = bold EB Garamond italic */
-.right a.collapsible.active,
-.right span.collapsible.active {
-  font-weight: 700;
-}
-
-/* Optional hover effect */
-.right a.collapsible:hover {
-  color: #000000;
 }
 
 /* Bio / contact blurb at bottom-left of right column */
