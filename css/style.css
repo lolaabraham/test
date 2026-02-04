@@ -53,18 +53,26 @@ body {
   background-color: #f3f3f3;
 }
 
-/* Collapsible submenu styling */
+/* Collapsible submenu styling with smooth animation */
 .submenu-collapsible {
-  display: none;
+  max-height: 0;               /* start collapsed */
+  overflow: hidden;            /* hide overflowing content */
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding-left: 0;             /* initial padding removed for animation */
+}
+
+.submenu-collapsible.show {
+  max-height: 500px;           /* enough for content */
+  padding-left: inherit;       /* restore indentation when open */
 }
 
 /* Level-specific indentation */
 .submenu-collapsible.level1 {
-  margin-left: 12px;   /* indent Level 1 items under Cobalt */
+  margin-left: 12px;   
 }
 
 .submenu-collapsible.level2 {
-  margin-left: 24px;   /* indent Level 2 items under Present */
+  margin-left: 24px;   
 }
 
 /* Make collapsible items block and clickable */
