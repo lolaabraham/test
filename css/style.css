@@ -6,16 +6,16 @@ body {
   font-family: 'EB Garamond', serif;
 }
 
-/* ===== LEFT COLUMN ===== */
+/* Left Column */
 .left {
   position: fixed;
   top: 144px;
-  bottom: 48px;        /* updated bottom margin */
-  left: 48px;          /* updated page margin */
+  bottom: 48px;        /* updated baseline */
+  left: 48px;           /* updated margin */
   width: 192px;
 
   font-size: 18pt;
-  text-align: right;   /* keeps logo right-aligned */
+  text-align: right;
   color: #333333;
 
   background-color: #ffffff;
@@ -24,19 +24,19 @@ body {
 /* Logo in left column */
 .left .logo {
   display: block;
-  width: 120px;        /* native size */
-  height: 120px;       /* native size */
-  margin: 0;           /* no extra spacing */
-  float: right;        /* right-align within the column */
+  width: 120px;
+  height: 120px;
+  margin: 0;
+  float: right;
 }
 
-/* ===== CENTER COLUMN ===== */
+/* Center Column */
 .center {
   position: absolute;
   top: 144px;
-  bottom: 48px;        /* updated bottom margin */
-  left: calc(48px + 192px + 48px);   /* left column + gap, page margin updated */
-  right: calc(264px + 72px + 48px);  /* right column + gap, page margin updated */
+  bottom: 48px;
+  left: calc(48px + 192px + 48px);   /* left page margin + left column + spacing */
+  right: calc(264px + 48px + 48px);  /* right column + spacing + page margin */
   
   overflow-y: auto;
 
@@ -47,32 +47,32 @@ body {
   background-color: #ffffff;
 }
 
-/* ===== RIGHT COLUMN ===== */
+/* Right Column */
 .right {
   position: fixed;
   top: 144px;
-  bottom: 48px;        /* updated bottom margin */
-  right: 48px;         /* updated page margin */
+  bottom: 48px;
+  right: 48px;
   width: 264px;
 
   font-size: 10pt;
-  font-style: italic; 
   text-align: left;
   color: #333333;
 
   background-color: #ffffff;
+  font-style: italic;   /* menu default italic */
 }
 
-/* ===== COLLAPSIBLES ===== */
+/* Collapsible submenu styling with smooth animation */
 .submenu-collapsible {
-  max-height: 0;               /* start collapsed */
-  overflow: hidden;            /* hide overflowing content */
-  transition: max-height 0.3s ease;  /* smooth slide */
+  max-height: 0;              
+  overflow: hidden;            
+  transition: max-height 0.3s ease;  
 }
 
 /* Open state */
 .submenu-collapsible.show {
-  max-height: 1000px;          /* big enough for nested content */
+  max-height: 1000px;          
 }
 
 /* Level-specific indentation */
@@ -84,24 +84,38 @@ body {
   margin-left: 24px;   
 }
 
-/* Make collapsible items block and clickable */
-.collapsible {
+/* Menu links (override default link styles) */
+.right a.collapsible {
+  color: #333333;
+  text-decoration: none;
   display: block;
+  font-style: italic;
   cursor: pointer;
   user-select: none;
 }
 
-/* ===== BIO / CONTACT ===== */
+/* Active menu item = bold EB Garamond italic */
+.right a.collapsible.active,
+.right span.collapsible.active {
+  font-weight: 700;
+}
+
+/* Optional hover effect */
+.right a.collapsible:hover {
+  color: #000000;
+}
+
+/* Bio / contact blurb at bottom-left of right column */
 .bio-contact {
   position: absolute;
   bottom: 0;
   left: 0;
 
   font-size: 10pt;
-  font-style: italic;       /* italic text */
-  color: #898989;           /* gray */
-  text-align: left;         /* left-aligned */
+  font-style: italic;
+  color: #898989;
+  text-align: left;
 
   line-height: 1.3;
-  max-width: 100%;           /* prevent overflow */
+  max-width: 100%;
 }
