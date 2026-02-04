@@ -25,6 +25,16 @@
       text-align: right;         /* right justified text */
       background-color: #f0f0f0;
     }
+
+  .right {
+    position: fixed;
+    top: 144px;
+    bottom: 24px;
+    right: 24px;
+    width: 240px;
+    background-color: #f0f0f0;
+  }
+
   </style>
 </head>
 <body>
@@ -32,10 +42,6 @@
   <div class="left">
     hello.
   </div>
-
-/* ---------- Right Column ---------- */
-.right {
-  position: fixed;
 
   top: 144px;
   bottom: 24px;
