@@ -1,83 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Two Column Layout</title>
+/* style.css */
 
-  <!-- EB Garamond font -->
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap" rel="stylesheet">
+body {
+  margin: 0;
+  background: #fff;
+  font-family: 'EB Garamond', serif;
+}
 
-  <style>
-    body {
-      margin: 0;
-      background: #fff;
-      font-family: 'EB Garamond', serif;
-    }
+/* Left Column */
+.left {
+  position: fixed;
+  top: 144px;
+  bottom: 24px;
+  left: 24px;
+  width: 192px;
 
-    /* Left Column */
-    .left {
-      position: fixed;
-      top: 144px;
-      bottom: 24px;
-      left: 24px;
-      width: 192px;
+  font-size: 18pt;
+  text-align: right;
+  color: #333333;
 
-      font-size: 18pt;
-      text-align: right;
-      color: #333333;
+  background-color: #f4f4f4;
+}
 
-      background-color: #f4f4f4;
-    }
-
-    /* Center Column */
-    .center {
-      position: absolute;
-      top: 144px;
-      bottom: 24px;
-      left: calc(24px + 192px + 48px);  /* left margin + left column width + gap */
-      right: calc(264px + 72px + 24px);  /* column width + gap from right column + right margin*/
+/* Center Column */
+.center {
+  position: absolute;
+  top: 144px;
+  bottom: 24px;
+  left: calc(24px + 192px + 48px);  /* left margin + left column width + gap */
+  right: calc(264px + 72px + 24px); /* right column width + gap + margin */
   
-      overflow-y: auto;            /* enable scrolling */
+  overflow-y: auto; /* scroll if content exceeds viewport */
 
-      font-size: 12pt;
-      text-align: left;
-      color: #333333;
+  font-size: 12pt;
+  text-align: left;
+  color: #333333;
 
-      background-color: #f4f4f4;
-    }
+  background-color: #f4f4f4;
+}
 
-    /* Right Column */
-    .right {
-      position: fixed;
-      top: 144px;
-      bottom: 24px;
-      right: 24px;
-      width: 264px;
+/* Right Column */
+.right {
+  position: fixed;
+  top: 144px;
+  bottom: 24px;
+  right: 24px;
+  width: 264px;
 
-      font-size: 12pt;
-      text-align: left;
-      color: #333333;
+  font-size: 12pt;
+  text-align: left;
+  color: #333333;
 
-      background-color: #f4f4f4;
-    }
-  </style>
-</head>
-<body>
+  background-color: #f4f4f4;
+}
 
-  <!-- Left Column -->
-  <div class="left">
-    hello.
-  </div>
-
-  <!-- Center Column -->
-  <div class="center">
-    gfy.
-  </div>
-
-  <!-- Right Column -->
-  <div class="right">
-    + Cobalt, ON | 47.3953° N, 79.6861° W
-  </div>
-
-</body>
-</html>
+/* Optional menu item spacing */
+.menu-item {
+  margin-bottom: 0.5rem;
+}
