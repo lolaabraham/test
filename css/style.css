@@ -53,11 +53,6 @@ body {
   background-color: #f3f3f3;
 }
 
-/* Optional menu item spacing */
-.menu-item {
-  margin-bottom: 0.5rem;
-}
-
 /* Submenu styling for right column */
 .submenu {
   margin-left: 16px;  /* indents the dashes */
