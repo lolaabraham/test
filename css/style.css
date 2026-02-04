@@ -18,7 +18,7 @@ body {
   text-align: right;
   color: #333333;
 
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 /* Logo in left column */
@@ -43,7 +43,7 @@ body {
   text-align: left;
   color: #333333;
 
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 /* Right Column */
@@ -54,11 +54,11 @@ body {
   right: 24px;
   width: 264px;
 
-  font-size: 12pt;
+  font-size: 10pt;
   text-align: left;
   color: #333333;
 
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 /* Collapsible submenu styling with smooth animation */
