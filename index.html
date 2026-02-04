@@ -59,17 +59,17 @@
 </div>
   </div>
 
-  <script>
-    const collapsibles = document.querySelectorAll('.collapsible');
-    collapsibles.forEach(item => {
-      item.addEventListener('click', () => {
-        const submenu = item.nextElementSibling;
-        if (submenu && submenu.classList.contains('submenu-collapsible')) {
-          submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
-        }
-      });
+<script>
+  const collapsibles = document.querySelectorAll('.collapsible');
+  collapsibles.forEach(item => {
+    item.addEventListener('click', () => {
+      const submenu = item.nextElementSibling;
+      if (submenu && submenu.classList.contains('submenu-collapsible')) {
+        submenu.classList.toggle('show'); // <-- toggle the 'show' class
+      }
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
