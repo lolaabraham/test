@@ -57,3 +57,8 @@ body {
 .menu-item {
   margin-bottom: 0.5rem;
 }
+
+/* Submenu styling for right column */
+.submenu {
+  margin-left: 16px;  /* indents the dashes */
+}
