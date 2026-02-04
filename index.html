@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home Page</title>
+  <title>Home</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- EB Garamond font -->
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,73 +15,46 @@
 
   <!-- Center Column -->
   <div class="center">
-    gfy.
+    <!-- Empty center column for now -->
   </div>
 
   <!-- Right Column / Menu -->
   <div class="right">
-  <span class="collapsible">+ Cobalt, ON | 47.3953° N, 79.6861° W</span>
-  <div class="submenu-collapsible level1">
-    <a href="past.html" class="collapsible">- Past</a><br>
-    <a href="present.html" class="collapsible">- Present</a><br>
-    <a href="future.html" class="collapsible">- Future</a>
-  </div>
+    <span class="collapsible">+ Cobalt, ON | 47.3953° N, 79.6861° W</span>
+    <div class="submenu-collapsible level1">
+      <a href="past.html" class="collapsible">- Past</a>
+      <a href="present.html" class="collapsible">- Present</a>
+      <a href="future.html" class="collapsible">- Future</a>
+    </div>
 
-  <div class="bio-contact">
-    Lola is a researcher and designer, born and raised in Toronto’s west end. Despite an aversion to running long distances, she is inexplicably committed to running long distances.
-    <br><br>
-    Contact here:
-    <!-- Instagram SVG -->
-    <a href="https://www.instagram.com/yourusername" target="_blank" style="text-decoration: none;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#898989" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 8px;">
-        <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path>
-        <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"></path>
-        <path d="M17.5 6.51L17.51 6.49889"></path>
-      </svg>
-    </a>
-    <!-- Email SVG -->
-    <a href="mailto:your@email.com" style="text-decoration: none;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#898989" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 8px;">
-        <path d="M7 9L12 12.5L17 9"></path>
-        <path d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z"></path>
-      </svg>
-    </a>
+    <div class="bio-contact">
+      Lola is a researcher and designer, born and raised in Toronto’s west end. Despite an aversion to running long distances, she is inexplicably committed to running long distances.
+      <br><br>
+      Contact here:
+      <a href="https://www.instagram.com/yourusername" target="_blank">
+        <!-- Instagram SVG -->
+      </a>
+      <a href="mailto:your@email.com">
+        <!-- Mail SVG -->
+      </a>
+    </div>
   </div>
-</div>
 
   <script>
     const collapsibles = document.querySelectorAll('.collapsible');
-
     collapsibles.forEach(item => {
       item.addEventListener('click', () => {
         const submenu = item.nextElementSibling;
-
-        if (submenu && submenu.classList.contains('submenu-collapsible')) {
+        if(submenu && submenu.classList.contains('submenu-collapsible')) {
           submenu.classList.toggle('show');
-
-          // Toggle + / −
-          if (item.textContent.startsWith('+')) {
-            item.textContent = item.textContent.replace('+', '−');
-          } else if (item.textContent.startsWith('−')) {
-            item.textContent = item.textContent.replace('−', '+');
-          }
-
-          // Close all nested open submenus when parent closes
-          if (!submenu.classList.contains('show')) {
-            const nestedSubmenus = submenu.querySelectorAll('.submenu-collapsible.show');
-            nestedSubmenus.forEach(nested => nested.classList.remove('show'));
-
-            const nestedCollapsibles = submenu.querySelectorAll('.collapsible');
-            nestedCollapsibles.forEach(nestedItem => {
-              if (nestedItem.textContent.startsWith('−')) {
-                nestedItem.textContent = nestedItem.textContent.replace('−', '+');
-              }
-            });
+          if(!submenu.classList.contains('show')) {
+            const nested = submenu.querySelectorAll('.submenu-collapsible.show');
+            nested.forEach(n=>n.classList.remove('show'));
           }
         }
       });
     });
   </script>
-  
+
 </body>
 </html>
