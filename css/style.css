@@ -29,7 +29,7 @@
       background-color: #f0f0f0;
     }
 
-    /* Centre Column */
+    /* Center Column */
     .center {
       position: absolute;
       top: 144px;
@@ -68,6 +68,11 @@
   <!-- Left Column -->
   <div class="left">
     hello.
+  </div>
+
+  <!-- Center Column -->
+  <div class="center">
+    gfy.
   </div>
 
   <!-- Right Column -->
