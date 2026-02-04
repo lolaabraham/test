@@ -24,9 +24,9 @@ body {
 /* Logo in left column */
 .left .logo {
   display: block;
-  width: 96px;
-  height: 96px;
-  margin-bottom: 0; /* no text below */
+  width: 80%;       /* fills ~80% of the 192px column → ~154px */
+  height: auto;     /* maintains aspect ratio */
+  margin: 0 auto;   /* centers horizontally */
 }
 
 /* Center Column */
