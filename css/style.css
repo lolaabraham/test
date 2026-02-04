@@ -70,6 +70,7 @@ body {
 }
 
 .collapsible {
-  cursor: pointer;      /* shows clickable pointer */
-  user-select: none;    /* prevent text selection on click */
+  display: block;       /* makes it block-level so next line starts below */
+  cursor: pointer;
+  user-select: none;
 }
