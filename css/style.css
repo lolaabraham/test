@@ -38,6 +38,14 @@ body {
   background-color: #f3f3f3;
 }
 
+/* Logo in left column */
+.left .logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 0;
+}
+
 /* Right Column */
 .right {
   position: fixed;
