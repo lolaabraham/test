@@ -26,10 +26,10 @@ body {
   position: absolute;
   top: 144px;
   bottom: 24px;
-  left: calc(24px + 192px + 48px);  /* left margin + left column width + gap */
-  right: calc(264px + 72px + 24px); /* right column width + gap + margin */
+  left: calc(24px + 192px + 48px);
+  right: calc(264px + 72px + 24px);
   
-  overflow-y: auto; /* scroll if content exceeds viewport */
+  overflow-y: auto;
 
   font-size: 12pt;
   text-align: left;
@@ -53,19 +53,23 @@ body {
   background-color: #f3f3f3;
 }
 
-/* Submenu styling for right column */
-.submenu {
-  margin-left: 16px;  /* indents the dashes */
-}
-
-/* Collapsible submenu for Present or top-level items */
+/* Collapsible submenu styling */
 .submenu-collapsible {
-  display: none;       /* hidden by default */
-  margin-left: 16px;   /* indentation */
+  display: none;
 }
 
+/* Level-specific indentation */
+.submenu-collapsible.level1 {
+  margin-left: 12px;   /* indent Level 1 items under Cobalt */
+}
+
+.submenu-collapsible.level2 {
+  margin-left: 24px;   /* indent Level 2 items under Present */
+}
+
+/* Make collapsible items block and clickable */
 .collapsible {
-  display: block;      /* makes each clickable item start on a new line */
+  display: block;
   cursor: pointer;
   user-select: none;
 }
