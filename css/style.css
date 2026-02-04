@@ -34,8 +34,8 @@
       position: absolute;
       top: 144px;
       bottom: 24px;
-      left: calc(24px + 192px + 24px);  /* left margin + left column width + gap */
-      right: calc(264px + 72px + 24px);  /* right margin + gap from right column */
+      left: calc(24px + 192px + 48px);  /* left margin + left column width + gap */
+      right: calc(264px + 72px + 24px);  /* column width + gap from right column + right margin*/
   
       overflow-y: auto;            /* enable scrolling */
 
