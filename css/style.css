@@ -29,6 +29,23 @@
       background-color: #f0f0f0;
     }
 
+/* Centre Column */
+.center {
+  position: absolute;
+  top: 144px;
+  bottom: 24px;
+  left: calc(24px + 192px + 24px);  /* left margin + left column width + gap */
+  right: calc(24px + 72px);          /* right margin + gap from right column */
+  
+  background-color: #ffffff;   /* optional to see content area */
+  overflow-y: auto;            /* enable scrolling */
+
+  font-family: 'EB Garamond', serif;
+  font-size: 10pt;
+  color: #333333;
+  text-align: justify;
+}
+
     /* Right Column */
     .right {
       position: fixed;
