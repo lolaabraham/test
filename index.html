@@ -37,5 +37,19 @@
   </div>
 </div>
 
+<script>
+  const collapsibles = document.querySelectorAll('.collapsible');
+  collapsibles.forEach(item => {
+    item.addEventListener('click', () => {
+      const submenu = item.nextElementSibling;
+      if (submenu.style.display === 'block') {
+        submenu.style.display = 'none';
+      } else {
+        submenu.style.display = 'block';
+      }
+    });
+  });
+</script>
+  
 </body>
 </html>
