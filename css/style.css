@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Left Column Example</title>
+  <title>Two Column Layout</title>
 
   <!-- EB Garamond font -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap" rel="stylesheet">
@@ -14,43 +14,48 @@
       font-family: 'EB Garamond', serif;
     }
 
+    /* Left Column */
     .left {
-      position: fixed;           /* keeps it fixed on screen */
-      top: 144px;                /* 144px from top */
-      bottom: 24px;              /* 24px from bottom */
-      left: 24px;                /* 24px from left */
-      width: 192px;               /* column width */
+      position: fixed;
+      top: 144px;
+      bottom: 24px;
+      left: 24px;
+      width: 192px;
+
+      font-size: 18pt;
+      text-align: right;
       color: #333333;
-      font-size: 18pt;           /* EB Garamond 18pt */
-      text-align: right;         /* right justified text */
+
       background-color: #f0f0f0;
     }
 
-  .right {
-    position: fixed;
-    top: 144px;
-    bottom: 24px;
-    right: 24px;
-    width: 240px;
-    background-color: #f0f0f0;
-  }
+    /* Right Column */
+    .right {
+      position: fixed;
+      top: 144px;
+      bottom: 24px;
+      right: 24px;
+      width: 240px;
 
+      font-size: 12pt;
+      text-align: left;
+      color: #333333;
+
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Left Column -->
   <div class="left">
     hello.
   </div>
 
-  top: 144px;
-  bottom: 24px;
-  right: 24px;
-
-  width: 240px;
-
-  background-color: #f0f0f0;
-}
+  <!-- Right Column -->
+  <div class="right">
+    + Cobalt, ON | 47.3953° N, 79.6861° W
+  </div>
 
 </body>
 </html>
