@@ -70,7 +70,7 @@ collapsibles.forEach(item => {
       // Toggle submenu visibility
       submenu.classList.toggle('show');
 
-      // Update + / - indicator
+      // Toggle + / - for this item
       if (item.textContent.startsWith('+')) {
         item.textContent = item.textContent.replace('+', '-');
       } else if (item.textContent.startsWith('-')) {
