@@ -21,6 +21,15 @@ body {
   background-color: #f3f3f3;
 }
 
+/* Logo in left column */
+.left .logo {
+  display: block;
+  max-width: 100%;    /* never exceed column width */
+  height: auto;       /* maintain aspect ratio */
+  margin-bottom: 0;
+  object-fit: contain; /* keeps logo proportions inside column */
+}
+
 /* Center Column */
 .center {
   position: absolute;
@@ -36,14 +45,6 @@ body {
   color: #333333;
 
   background-color: #f3f3f3;
-}
-
-/* Logo in left column */
-.left .logo {
-  display: block;
-  width: 96px;
-  height: 96px;
-  margin-bottom: 0;
 }
 
 /* Right Column */
