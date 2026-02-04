@@ -63,14 +63,14 @@ body {
   margin-left: 16px;  /* indents the dashes */
 }
 
-/* Collapsible submenu for Present */
+/* Collapsible submenu for Present or top-level items */
 .submenu-collapsible {
-  display: none;        /* hidden by default */
-  margin-left: 16px;    /* same indentation as other submenus */
+  display: none;       /* hidden by default */
+  margin-left: 16px;   /* indentation */
 }
 
 .collapsible {
-  display: block;       /* makes it block-level so next line starts below */
+  display: block;      /* makes each clickable item start on a new line */
   cursor: pointer;
   user-select: none;
 }
