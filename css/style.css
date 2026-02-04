@@ -24,8 +24,8 @@ body {
 /* Logo in left column */
 .left .logo {
   display: block;
-  width: 96px;      /* native size */
-  height: 96px;     /* native size */
+  width: 120px;      /* native size */
+  height: 120px;     /* native size */
   margin: 0;        /* no extra spacing */
   float: right;     /* right-align within the column */
 }
