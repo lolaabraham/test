@@ -21,33 +21,33 @@
 
   <!-- Right Column / Menu -->
   <div class="right">
-  <span class="collapsible">+ Cobalt, ON | 47.3953° N, 79.6861° W</span>
-  <div class="submenu-collapsible">
-    - Past<br>
-    <span class="collapsible">+ Present</span>
+    <span class="collapsible">+ Cobalt, ON | 47.3953° N, 79.6861° W</span>
     <div class="submenu-collapsible">
-      - Property<br>
-      - Extraction<br>
-      - Violence<br>
-      - Toxicity<br>
-      - Loss<br>
-      - Resilience
+      - Past<br>
+      <span class="collapsible">- Present</span>
+      <div class="submenu-collapsible">
+        - Property<br>
+        - Extraction<br>
+        - Violence<br>
+        - Toxicity<br>
+        - Loss<br>
+        - Resilience
+      </div>
+      - Future
     </div>
-    - Future
   </div>
-</div>
 
-<script>
-  const collapsibles = document.querySelectorAll('.collapsible');
-  collapsibles.forEach(item => {
-    item.addEventListener('click', () => {
-      const submenu = item.nextElementSibling;
-      if (submenu && submenu.classList.contains('submenu-collapsible')) {
-        submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
-      }
+  <script>
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach(item => {
+      item.addEventListener('click', () => {
+        const submenu = item.nextElementSibling;
+        if (submenu && submenu.classList.contains('submenu-collapsible')) {
+          submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+        }
+      });
     });
-  });
-</script>
+  </script>
   
 </body>
 </html>
