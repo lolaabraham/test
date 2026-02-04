@@ -62,3 +62,14 @@ body {
 .submenu {
   margin-left: 16px;  /* indents the dashes */
 }
+
+/* Collapsible submenu for Present */
+.submenu-collapsible {
+  display: none;        /* hidden by default */
+  margin-left: 16px;    /* same indentation as other submenus */
+}
+
+.collapsible {
+  cursor: pointer;      /* shows clickable pointer */
+  user-select: none;    /* prevent text selection on click */
+}
