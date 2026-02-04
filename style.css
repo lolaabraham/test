@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Column Example</title>
+
+  <!-- EB Garamond font -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .left {
+      position: fixed;           /* keeps it fixed on screen */
+      top: 144px;                /* 144px from top */
+      bottom: 24px;              /* 24px from bottom */
+      left: 24px;                /* 24px from left */
+      width: 96px;               /* column width */
+      color: #333333;
+      font-size: 18pt;           /* EB Garamond 18pt */
+      text-align: right;         /* right justified text */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left">
+    hello.
+  </div>
+
+</body>
+</html>
