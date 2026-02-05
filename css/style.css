@@ -1,0 +1,162 @@
+/* style.css */
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: 'EB Garamond', serif;
+}
+
+/* Left Column */
+.left {
+  position: fixed;
+  top: 144px;
+  bottom: 48px;
+  left: 48px;
+  width: 192px;
+
+  font-size: 18pt;
+  text-align: right;
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+/* Logo in left column */
+.left .logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0;
+  float: right;
+}
+
+/* Center Column */
+.center {
+  position: absolute;
+  top: 0;          /* allow content to scroll from the very top */
+  bottom: 48px;
+  left: calc(48px + 192px + 48px); /* left margin + left column width + gap to center */
+  right: calc(288px + 48px + 48px); /* right column width + right margin + gap to center */
+
+  overflow-y: auto;
+
+  font-size: 12pt;
+  text-align: justify;  /* fully justified paragraphs */
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+/* Center column title */
+.center h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 18pt;
+  font-weight: 700;   /* bold */
+  color: #333333;
+  text-align: left;   /* left-justified */
+  margin: 0;
+  margin-top: 144px;  /* starts visually 144px from top */
+}
+
+/* Center column paragraphs below title */
+.center p {
+  font-family: 'EB Garamond', serif;
+  font-size: 12pt;
+  font-weight: 400;   /* regular */
+  color: #333333;
+  text-align: justify; /* justified */
+  margin-top: 8px;    /* spacing below title / between paragraphs */
+  margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box; /* full width of column */
+}
+
+/* Right Column */
+.right {
+  position: fixed;
+  top: 144px;
+  bottom: 48px;
+  right: 48px;
+  width: 288px;
+
+  font-size: 12pt;
+  text-align: left;
+  color: #333333;
+
+  background-color: #ffffff;
+  font-style: italic;   /* menu italic */
+}
+
+/* Collapsible submenu styling */
+.submenu-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* Open state */
+.submenu-collapsible.show {
+  max-height: 1000px;
+}
+
+/* Level-specific indentation */
+.submenu-collapsible.level1 {
+  margin-left: 12px;
+}
+
+.submenu-collapsible.level2 {
+  margin-left: 24px;
+}
+
+/* Make collapsible items clickable */
+.collapsible {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Bold the parent collapsible when its submenu is expanded */
+.collapsible:has(+ .submenu-collapsible.show) {
+  font-weight: bold;
+}
+
+/* Bio / contact blurb at bottom-left of right column */
+.bio-contact {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-size: 10pt;
+  font-style: italic;
+  color: #898989;
+  text-align: left;
+
+  line-height: 1.3;
+  max-width: 100%;
+}
+
+.center-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0;        /* no space between items */
+  padding: 0;    /* no outer padding */
+}
+
+.center-grid img {
+  width: 100%;
+  height: auto;
+  display: block;   /* removes any extra space below image */
+  margin: 0;        /* flush against text blocks */
+  border-radius: 0; /* no rounding */
+}
+
+.center-grid .text-block {
+  margin: 0;
+  padding: 0;
+}
+
+/* remove default margins/padding for all text inside blocks */
+.center-grid .text-block * {
+  margin: 0;
+  padding: 0;
+}
