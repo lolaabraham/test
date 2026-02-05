@@ -109,20 +109,25 @@ body {
 .center-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;       /* space between items stays */
-  padding: 0;      /* remove outer padding if desired */
+  gap: 0;        /* no space between items */
+  padding: 0;    /* no outer padding */
 }
 
 .center-grid img {
   width: 100%;
   height: auto;
-  border-radius: 0; /* optional: remove rounding too */
+  display: block;   /* removes any extra space below image */
+  margin: 0;        /* flush against text blocks */
+  border-radius: 0; /* no rounding */
 }
 
 .center-grid .text-block {
-  font-size: 1rem;
-  line-height: 1.4;
-  padding: 0;      /* remove all padding */
-  background: none; /* no background */
-  border-radius: 0; /* remove rounding */
+  margin: 0;
+  padding: 0;
+}
+
+/* remove default margins/padding for all text inside blocks */
+.center-grid .text-block * {
+  margin: 0;
+  padding: 0;
 }
