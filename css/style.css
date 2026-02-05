@@ -109,8 +109,8 @@ body {
 .center-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 20px;       /* space between items */
+  padding: 20px;   /* padding around the grid */
 }
 
 .center-grid img {
@@ -122,4 +122,7 @@ body {
 .center-grid .text-block {
   font-size: 1rem;
   line-height: 1.4;
+  padding: 10px;   /* padding inside text block */
+  background: #f9f9f9; /* optional subtle background for contrast */
+  border-radius: 4px;
 }
